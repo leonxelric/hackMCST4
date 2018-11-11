@@ -18,7 +18,8 @@ public class Program {
 		updateCurrentPosition(frame);
 		if(currentPosition.closeEnough(new Position(CorrectData.getCorrectData("letterToSign")[0],
 											CorrectData.getCorrectData("letterToSign")[1],
-											CorrectData.getCorrectData("letterToSign")[2])));
+											CorrectData.getCorrectData("letterToSign")[2])))
+			setDifferentRandomLetter();
 	}
 	
 	private void updateCurrentPosition(Frame frame)
