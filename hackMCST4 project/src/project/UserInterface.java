@@ -49,7 +49,7 @@ public class UserInterface {
 		parent.beginShape();
 		parent.vertex(xVals[0], yVals[0], zVals[0]); //represents the position of palm
 		parent.vertex(xVals[1], yVals[1], zVals[1]); //represents the position of 
-		parent.vertex(xVals[2], yVals[2], zVals[2]); //
+		parent.vertex(xVals[2], yVals[2], zVals[2]); //;aflskdfj
 		parent.endShape();
 	}
 }
