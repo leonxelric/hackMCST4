@@ -6,10 +6,7 @@ import processing.core.*;
 
 public class UserInterface {
 	private PApplet parent;
-	private PImage image;
-	private String imagePath;
 	private Controller controller;
-//	private Frame frame;
 	private Program program;
 	
 	public UserInterface(PApplet parent, Controller controller)
@@ -30,7 +27,8 @@ public class UserInterface {
 	
 	public void drawBackground(Frame frame)
 	{
-		
+		parent.fill(0);
+		parent.background(0);
 	}
 	
 	public void drawInterface()
@@ -38,5 +36,10 @@ public class UserInterface {
 		parent.textSize(50);
 		parent.fill(255);
 		parent.text("Letter to sign: " + program.getLetterToSign(), 50, 50);
+	}
+	
+	public void drawHand()
+	{
+		
 	}
 }
