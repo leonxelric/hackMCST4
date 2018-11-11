@@ -35,11 +35,8 @@ public class UserInterface {
 	
 	public void drawInterface()
 	{
-		
-	}
-	
-	public void drawHUD()
-	{
-		
+		parent.textSize(50);
+		parent.fill(255);
+		parent.text("Letter to sign: " + program.getLetterToSign(), 50, 50);
 	}
 }

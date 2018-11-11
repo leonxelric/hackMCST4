@@ -25,7 +25,6 @@ public class SignLanguageTeacher extends PApplet {
 	public void draw()
 	{
 		ui.update();
-		ui.drawHUD();
 		ui.drawInterface();
 	}
 }
