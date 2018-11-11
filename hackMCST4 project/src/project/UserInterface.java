@@ -40,6 +40,16 @@ public class UserInterface {
 	
 	public void drawHand()
 	{
+		int[] xVals = program.getCurrentPosition().getXVals();
+		int[] yVals = program.getCurrentPosition().getYVals();
+		int[] zVals = program.getCurrentPosition().getZVals();
 		
+		parent.translate(parent.width, parent.height, 0);
+		
+		parent.beginShape();
+		parent.vertex(xVals[0], yVals[0], zVals[0]); //represents the position of palm
+		parent.vertex(xVals[1], yVals[1], zVals[1]); //represents the position of 
+		parent.vertex(xVals[2], yVals[2], zVals[2]); //
+		parent.endShape();
 	}
 }
