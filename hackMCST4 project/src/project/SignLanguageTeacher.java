@@ -14,7 +14,7 @@ public class SignLanguageTeacher extends PApplet {
 	
 	public void settings()
 	{
-		size(500, 500, P3D);
+		size(1000, 1000, P3D);
 	}
 	
 	public void setup()
@@ -25,6 +25,7 @@ public class SignLanguageTeacher extends PApplet {
 	public void draw()
 	{
 		ui.update();
+		ui.drawBackground();
 		ui.drawHand();
 		ui.drawInterface();
 	}

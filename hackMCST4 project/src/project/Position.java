@@ -5,24 +5,34 @@ public class Position {
 	private float[] yVals;
 	private float[] zVals;
 	
+	public Position()
+	{
+		xVals = new float[22];
+		yVals = new float[22];
+		zVals = new float[22];
+	}
+	
 	public Position(float[] rawXVals, float[] rawYVals, float[] rawZVals)
 	{
 		float xOrigin = rawXVals[0];
 		float yOrigin = rawYVals[0];
 		float zOrigin = rawZVals[0];
 		
-		for(int i = 0; i < rawXVals.length; i++)
+		xVals = new float[22];
+		yVals = new float[22];
+		zVals = new float[22];
+		
+		for(int i = 0; i < xVals.length; i++)
 		{
-			rawXVals[i] -= xOrigin;
-
+			xVals[i] = rawXVals[i] - xOrigin;
 		}
-		for(int i = 0; i < rawYVals.length; i ++)
+		for(int i = 0; i < yVals.length; i ++)
 		{
-			rawYVals[i] -= yOrigin;
+			yVals[i] = rawYVals[i] - yOrigin;
 		}
-		for(int i = 0; i < rawZVals.length; i ++)
+		for(int i = 0; i < zVals.length; i ++)
 		{
-			rawZVals[i] -= zOrigin;
+			zVals[i] = rawZVals[i] - zOrigin;
 		}
 		//for loop that loops through x vals and subtracts x origin from each
 		//ditto for y and z
@@ -30,7 +40,17 @@ public class Position {
 	
 	public boolean closeEnough(Position other)
 	{
-		return false;
+		for(int i = 0; i < 22; i++)
+		{
+			if((Math.abs(xVals[i] - other.xVals[i])) > 20)
+				return false;
+			if((Math.abs(yVals[i] - other.yVals[i])) > 20)
+				return false;
+			if((Math.abs(zVals[i] - other.zVals[i])) > 20)
+				return false;
+		}
+		
+		return true;
 	}
 	
 	public float[] getXVals()

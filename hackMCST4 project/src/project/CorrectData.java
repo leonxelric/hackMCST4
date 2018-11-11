@@ -7,7 +7,7 @@ public class CorrectData {
 		
 	}
 	
-	public static int[][] getCorrectData(String letter)
+	public static float[][] getCorrectData(String letter)
 	{
 		return null;
 	}

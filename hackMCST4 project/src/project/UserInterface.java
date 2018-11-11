@@ -19,16 +19,26 @@ public class UserInterface {
 	public void update()
 	{
 		Frame frame = controller.frame();
-		if (frame.isValid())
+		if(frame.isValid())
 		{
 			program.processFrame(frame);
 		}
+		for(int i = 0; i < 22; i++)
+		{
+			System.out.println("x at " + i + ": " + program.getCurrentPosition().getXVals()[i]);
+			System.out.println("y at " + i + ": " + program.getCurrentPosition().getZVals()[i]);
+			System.out.println("z at " + i + ": " + program.getCurrentPosition().getYVals()[i]);
+			System.out.println();
+		}
+//		System.out.println(program.getCurrentPosition().getXVals()[0]);
+//		System.out.println(program.getCurrentPosition().getYVals()[0]);
+//		System.out.println(program.getCurrentPosition().getZVals()[0]);
+//		System.out.println();
 	}
 	
-	public void drawBackground(Frame frame)
+	public void drawBackground()
 	{
-		parent.fill(0);
-		parent.background(0);
+		parent.background(255,0,0);
 	}
 	
 	public void drawInterface()
@@ -40,160 +50,161 @@ public class UserInterface {
 	
 	public void drawHand()
 	{
-		int[] xVals = program.getCurrentPosition().getXVals();
-		int[] yVals = program.getCurrentPosition().getYVals();
-		int[] zVals = program.getCurrentPosition().getZVals();
+		float[] xVals = program.getCurrentPosition().getXVals();
+		float[] yVals = program.getCurrentPosition().getYVals();
+		float[] zVals = program.getCurrentPosition().getZVals();
 		parent.strokeWeight(5);
-		parent.translate(parent.width, parent.height, 0);
+		parent.pushMatrix();
+		parent.translate(parent.width/2, parent.height/2, 0);
 		
 		parent.pushMatrix();
-		parent.translate(xVals[0], yVals[0], zVals[0]);
+		parent.translate(xVals[0]*2, yVals[0]*2, zVals[0]*2);
 		parent.sphere(10);
 		parent.popMatrix();
 		parent.pushMatrix();
-		parent.translate(xVals[1], yVals[1], zVals[1]);
-		parent.sphere(10);
+		parent.translate(xVals[1]*2, yVals[1]*2, zVals[1]*2);
+		parent.sphere(5);
 		parent.popMatrix();
 		parent.pushMatrix();
-		parent.translate(xVals[2], yVals[2], zVals[2]);
-		parent.sphere(10);
+		parent.translate(xVals[2]*2, yVals[2]*2, zVals[2]*2);
+		parent.sphere(5);
 		parent.popMatrix();
 		parent.pushMatrix();
-		parent.translate(xVals[3], yVals[3], zVals[3]);
-		parent.sphere(10);
+		parent.translate(xVals[3]*2, yVals[3]*2, zVals[3]*2);
+		parent.sphere(5);
 		parent.popMatrix();
 		parent.pushMatrix();
-		parent.translate(xVals[4], yVals[4], zVals[4]);
-		parent.sphere(10);
+		parent.translate(xVals[4]*2, yVals[4]*2, zVals[4]*2);
+		parent.sphere(5);
 		parent.popMatrix();
 		parent.pushMatrix();
-		parent.translate(xVals[5], yVals[5], zVals[5]);
-		parent.sphere(10);
+		parent.translate(xVals[5]*2, yVals[5]*2, zVals[5]*2);
+		parent.sphere(5);
 		parent.popMatrix();
 		parent.pushMatrix();
-		parent.translate(xVals[6], yVals[6], zVals[6]);
-		parent.sphere(10);
+		parent.translate(xVals[6]*2, yVals[6]*2, zVals[6]*2);
+		parent.sphere(5);
 		parent.popMatrix();
 		parent.pushMatrix();
-		parent.translate(xVals[7], yVals[7], zVals[7]);
-		parent.sphere(10);
+		parent.translate(xVals[7]*2, yVals[7]*2, zVals[7]*2);
+		parent.sphere(5);
 		parent.popMatrix();		
 		parent.pushMatrix();
-		parent.translate(xVals[8], yVals[8], zVals[8]);
-		parent.sphere(10);
+		parent.translate(xVals[8]*2, yVals[8]*2, zVals[8]*2);
+		parent.sphere(5);
 		parent.popMatrix();		
 		parent.pushMatrix();
-		parent.translate(xVals[9], yVals[9], zVals[9]);
-		parent.sphere(10);
+		parent.translate(xVals[9]*2, yVals[9]*2, zVals[9]*2);
+		parent.sphere(5);
 		parent.popMatrix();		
 		parent.pushMatrix();
-		parent.translate(xVals[10], yVals[10], zVals[10]);
-		parent.sphere(10);
+		parent.translate(xVals[10]*2, yVals[10]*2, zVals[10]*2);
+		parent.sphere(5);
 		parent.popMatrix();
 		parent.pushMatrix();
-		parent.translate(xVals[11], yVals[11], zVals[11]);
-		parent.sphere(10);
+		parent.translate(xVals[11]*2, yVals[11]*2, zVals[11]*2);
+		parent.sphere(5);
 		parent.popMatrix();
 		parent.pushMatrix();
-		parent.translate(xVals[12], yVals[12], zVals[12]);
-		parent.sphere(10);
+		parent.translate(xVals[12]*2, yVals[12]*2, zVals[12]*2);
+		parent.sphere(5);
 		parent.popMatrix();
 		parent.pushMatrix();
-		parent.translate(xVals[13], yVals[13], zVals[13]);
-		parent.sphere(10);
+		parent.translate(xVals[13]*2, yVals[13]*2, zVals[13]*2);
+		parent.sphere(5);
 		parent.popMatrix();
 		parent.pushMatrix();
-		parent.translate(xVals[14], yVals[14], zVals[14]);
-		parent.sphere(10);
+		parent.translate(xVals[14]*2, yVals[14]*2, zVals[14]*2);
+		parent.sphere(5);
 		parent.popMatrix();
 		parent.pushMatrix();
-		parent.translate(xVals[15], yVals[15], zVals[15]);
-		parent.sphere(10);
+		parent.translate(xVals[15]*2, yVals[15]*2, zVals[15]*2);
+		parent.sphere(5);
 		parent.popMatrix();
 		parent.pushMatrix();
-		parent.translate(xVals[16], yVals[16], zVals[16]);
-		parent.sphere(10);
+		parent.translate(xVals[16]*2, yVals[16]*2, zVals[16]*2);
+		parent.sphere(5);
 		parent.popMatrix();
 		parent.pushMatrix();
-		parent.translate(xVals[17], yVals[17], zVals[17]);
-		parent.sphere(10);
+		parent.translate(xVals[17]*2, yVals[17]*2, zVals[17]*2);
+		parent.sphere(5);
 		parent.popMatrix();
 		parent.pushMatrix();
-		parent.translate(xVals[18], yVals[18], zVals[18]);
-		parent.sphere(10);
+		parent.translate(xVals[18]*2, yVals[18]*2, zVals[18]*2);
+		parent.sphere(5);
 		parent.popMatrix();
 		parent.pushMatrix();
-		parent.translate(xVals[19], yVals[19], zVals[19]);
-		parent.sphere(10);
+		parent.translate(xVals[19]*2, yVals[19]*2, zVals[19]*2);
+		parent.sphere(5);
 		parent.popMatrix();
 		parent.pushMatrix();
-		parent.translate(xVals[20], yVals[20], zVals[20]);
-		parent.sphere(10);
+		parent.translate(xVals[20]*2, yVals[20]*2, zVals[20]*2);
+		parent.sphere(5);
 		parent.popMatrix();
 		parent.pushMatrix();
-		parent.translate(xVals[21], yVals[21], zVals[21]);
-		parent.sphere(10);
+		parent.translate(xVals[21]*2, yVals[21]*2, zVals[21]*2);
+		parent.sphere(5);
 		parent.popMatrix();
 		
 		
 		parent.beginShape();
-		parent.vertex(xVals[1], yVals[1], zVals[1]);
-		parent.vertex(xVals[5], yVals[5], zVals[5]);
-		parent.vertex(xVals[9], yVals[9], zVals[9]);
-		parent.vertex(xVals[13], yVals[13], zVals[13]);
-		parent.vertex(xVals[17], yVals[17], zVals[17]);
-		parent.vertex(xVals[21], yVals[21], zVals[21]);
-		parent.vertex(xVals[1], yVals[1], zVals[1]);
+		parent.vertex(xVals[1]*2, yVals[1]*2, zVals[1]*2);
+		parent.vertex(xVals[5]*2, yVals[5]*2, zVals[5]*2);
+		parent.vertex(xVals[9]*2, yVals[9]*2, zVals[9]*2);
+		parent.vertex(xVals[13]*2, yVals[13]*2, zVals[13]*2);
+		parent.vertex(xVals[17]*2, yVals[17]*2, zVals[17]*2);
+		parent.vertex(xVals[21]*2, yVals[21]*2, zVals[21]*2);
+		parent.vertex(xVals[1]*2, yVals[1]*2, zVals[1]*2);
 		parent.endShape();
 		
 		//fingers
 		parent.beginShape();
-		parent.vertex(xVals[0], yVals[0], zVals[0]); //finger1
-		parent.vertex(xVals[5], yVals[5], zVals[5]); 
-		parent.vertex(xVals[6], yVals[6], zVals[6]);
-		parent.vertex(xVals[7], yVals[7], zVals[7]);
-		parent.vertex(xVals[8], yVals[8], zVals[8]);
-		parent.vertex(xVals[7], yVals[7], zVals[7]);
-		parent.vertex(xVals[6], yVals[6], zVals[6]);
-		parent.vertex(xVals[5], yVals[5], zVals[5]);
-		parent.vertex(xVals[0], yVals[0], zVals[0]); //finger2
-		parent.vertex(xVals[9], yVals[9], zVals[9]);
-		parent.vertex(xVals[10], yVals[10], zVals[10]);
-		parent.vertex(xVals[11], yVals[11], zVals[11]);
-		parent.vertex(xVals[12], yVals[12], zVals[12]);
-		parent.vertex(xVals[11], yVals[11], zVals[11]);
-		parent.vertex(xVals[10], yVals[10], zVals[10]);
-		parent.vertex(xVals[9], yVals[9], zVals[9]);
-		parent.vertex(xVals[0], yVals[0], zVals[0]); //finger3
-		parent.vertex(xVals[13], yVals[13], zVals[13]);
-		parent.vertex(xVals[14], yVals[14], zVals[14]);
-		parent.vertex(xVals[15], yVals[15], zVals[15]);
-		parent.vertex(xVals[16], yVals[16], zVals[16]);
-		parent.vertex(xVals[15], yVals[15], zVals[15]);
-		parent.vertex(xVals[14], yVals[14], zVals[14]);
-		parent.vertex(xVals[13], yVals[13], zVals[13]);
-		parent.vertex(xVals[0], yVals[0], zVals[0]); //finger4
-		parent.vertex(xVals[17], yVals[17], zVals[17]);
-		parent.vertex(xVals[18], yVals[18], zVals[18]);
-		parent.vertex(xVals[19], yVals[19], zVals[19]);
-		parent.vertex(xVals[20], yVals[20], zVals[20]);
-		parent.vertex(xVals[19], yVals[19], zVals[19]);
-		parent.vertex(xVals[18], yVals[18], zVals[18]);
-		parent.vertex(xVals[17], yVals[17], zVals[17]);
-		parent.vertex(xVals[0], yVals[0], zVals[0]);
+		parent.vertex(xVals[0]*2, yVals[0]*2, zVals[0]*2); //finger1
+		parent.vertex(xVals[5]*2, yVals[5]*2, zVals[5]*2); 
+		parent.vertex(xVals[6]*2, yVals[6]*2, zVals[6]*2);
+		parent.vertex(xVals[7]*2, yVals[7]*2, zVals[7]*2);
+		parent.vertex(xVals[8]*2, yVals[8]*2, zVals[8]*2);
+		parent.vertex(xVals[7]*2, yVals[7]*2, zVals[7]*2);
+		parent.vertex(xVals[6]*2, yVals[6]*2, zVals[6]*2);
+		parent.vertex(xVals[5]*2, yVals[5]*2, zVals[5]*2);
+		parent.vertex(xVals[0]*2, yVals[0]*2, zVals[0]*2); //finger2
+		parent.vertex(xVals[9]*2, yVals[9]*2, zVals[9]*2);
+		parent.vertex(xVals[10]*2, yVals[10]*2, zVals[10]*2);
+		parent.vertex(xVals[11]*2, yVals[11]*2, zVals[11]*2);
+		parent.vertex(xVals[12]*2, yVals[12]*2, zVals[12]*2);
+		parent.vertex(xVals[11]*2, yVals[11]*2, zVals[11]*2);
+		parent.vertex(xVals[10]*2, yVals[10]*2, zVals[10]*2);
+		parent.vertex(xVals[9]*2, yVals[9]*2, zVals[9]*2);
+		parent.vertex(xVals[0]*2, yVals[0]*2, zVals[0]*2); //finger3
+		parent.vertex(xVals[13]*2, yVals[13]*2, zVals[13]*2);
+		parent.vertex(xVals[14]*2, yVals[14]*2, zVals[14]*2);
+		parent.vertex(xVals[15]*2, yVals[15]*2, zVals[15]*2);
+		parent.vertex(xVals[16]*2, yVals[16]*2, zVals[16]*2);
+		parent.vertex(xVals[15]*2, yVals[15]*2, zVals[15]*2);
+		parent.vertex(xVals[14]*2, yVals[14]*2, zVals[14]*2);
+		parent.vertex(xVals[13]*2, yVals[13]*2, zVals[13]*2);
+		parent.vertex(xVals[0]*2, yVals[0]*2, zVals[0]*2); //finger4
+		parent.vertex(xVals[17]*2, yVals[17]*2, zVals[17]*2);
+		parent.vertex(xVals[18]*2, yVals[18]*2, zVals[18]*2);
+		parent.vertex(xVals[19]*2, yVals[19]*2, zVals[19]*2);
+		parent.vertex(xVals[20]*2, yVals[20]*2, zVals[20]*2);
+		parent.vertex(xVals[19]*2, yVals[19]*2, zVals[19]*2);
+		parent.vertex(xVals[18]*2, yVals[18]*2, zVals[18]*2);
+		parent.vertex(xVals[17]*2, yVals[17]*2, zVals[17]*2);
+		parent.vertex(xVals[0]*2, yVals[0]*2, zVals[0]*2);
 		parent.endShape();
 
 		//thumb
 		parent.beginShape();
-		parent.vertex(xVals[1], yVals[1], zVals[1]);
-		parent.vertex(xVals[2], yVals[2], zVals[2]);
-		parent.vertex(xVals[3], yVals[3], zVals[3]);
-		parent.vertex(xVals[4], yVals[4], zVals[4]);
-		parent.vertex(xVals[3], yVals[3], zVals[3]);
-		parent.vertex(xVals[2], yVals[2], zVals[2]);
-		parent.vertex(xVals[1], yVals[1], zVals[1]);
+		parent.vertex(xVals[1]*2, yVals[1]*2, zVals[1]*2);
+		parent.vertex(xVals[2]*2, yVals[2]*2, zVals[2]*2);
+		parent.vertex(xVals[3]*2, yVals[3]*2, zVals[3]*2);
+		parent.vertex(xVals[4]*2, yVals[4]*2, zVals[4]*2);
+		parent.vertex(xVals[3]*2, yVals[3]*2, zVals[3]*2);
+		parent.vertex(xVals[2]*2, yVals[2]*2, zVals[2]*2);
+		parent.vertex(xVals[1]*2, yVals[1]*2, zVals[1]*2);
 		parent.endShape();
 		
-		
+		parent.popMatrix();
 	}
 }
