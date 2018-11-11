@@ -22,17 +22,28 @@ public class Position {
 		yVals = new float[22];
 		zVals = new float[22];
 		
+//		for(int i = 0; i < xVals.length; i++)
+//		{
+//			xVals[i] = rawXVals[i] - xOrigin;
+//		}
+//		for(int i = 0; i < yVals.length; i ++)
+//		{
+//			yVals[i] = rawYVals[i] - yOrigin;
+//		}
+//		for(int i = 0; i < zVals.length; i ++)
+//		{
+//			zVals[i] = rawZVals[i] - zOrigin;
 		for(int i = 0; i < xVals.length; i++)
 		{
-			xVals[i] = rawXVals[i] - xOrigin;
+			xVals[i] = rawXVals[i];
 		}
 		for(int i = 0; i < yVals.length; i ++)
 		{
-			yVals[i] = rawYVals[i] - yOrigin;
+			yVals[i] = rawYVals[i];
 		}
 		for(int i = 0; i < zVals.length; i ++)
 		{
-			zVals[i] = rawZVals[i] - zOrigin;
+			zVals[i] = rawZVals[i];
 		}
 		//for loop that loops through x vals and subtracts x origin from each
 		//ditto for y and z
