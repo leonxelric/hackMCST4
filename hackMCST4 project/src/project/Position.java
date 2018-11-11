@@ -13,9 +13,16 @@ public class Position {
 		
 		for(int i = 0; i < rawXVals.length; i++)
 		{
-			rawXVals[0] -= xOrigin;
-			rawYVals[0] -= yOrigin;
-			rawZVals[0] -= zOrigin;
+			rawXVals[i] -= xOrigin;
+
+		}
+		for(int i = 0; i < rawYVals.length; i ++)
+		{
+			rawYVals[i] -= yOrigin;
+		}
+		for(int i = 0; i < rawZVals.length; i ++)
+		{
+			rawZVals[i] -= zOrigin;
 		}
 		//for loop that loops through x vals and subtracts x origin from each
 		//ditto for y and z
